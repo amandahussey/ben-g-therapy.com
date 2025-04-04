@@ -1,4 +1,10 @@
-import { Link, Stack, ThemeProvider, Typography } from "@mui/material";
+import {
+  Link,
+  Stack,
+  ThemeProvider,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 
 import ben from "./assets/ben.jpg";
 import benSilly from "./assets/ben-silly.jpg";
@@ -10,24 +16,36 @@ import "./App.css";
 import { theme } from "./theme";
 
 function App() {
+  const isMobile = useMediaQuery("(max-width:600px)");
+
+  console.log("isMobile", isMobile);
+
   return (
     <ThemeProvider theme={theme}>
-      <Stack justifyContent="center" alignItems="center" maxWidth={1000}>
+      <Stack
+        justifyContent="center"
+        alignItems="center"
+        maxWidth={isMobile ? undefined : 1000}
+      >
         {/* Section 1 */}
         <Stack
-          direction="row"
+          direction={isMobile ? "column-reverse" : "row"}
           alignItems="center"
+          justifyContent="center"
           spacing={4}
           minHeight="100vh"
         >
-          <Typography variant="h4" textAlign="left">
+          <Typography variant="h4" textAlign={isMobile ? "center" : "left"}>
             How would it feel to be heard, understood, and supported through
             hard times in your life?
           </Typography>
           <Stack alignItems="center" justifyContent="center" spacing={3}>
-            <img src={ben} style={{ height: 400, borderRadius: "50%" }} />
+            <img
+              src={ben}
+              style={{ height: isMobile ? 300 : 400, borderRadius: "50%" }}
+            />
             <Stack width="100%">
-              <Typography variant="h5" textAlign="left">
+              <Typography variant="h5" textAlign={isMobile ? "center" : "left"}>
                 Ben Green, LCPP
               </Typography>
               <Typography
@@ -45,7 +63,11 @@ function App() {
         <Stack justifyContent="center" spacing={16} minHeight="100vh" pb={8}>
           <Stack alignItems="center" spacing={6}>
             <img src={mentalHealthIcon} style={{ height: 150 }} />
-            <Typography variant="h4" textAlign="left" fontStyle="italic">
+            <Typography
+              variant="h4"
+              textAlign={isMobile ? "center" : "left"}
+              fontStyle="italic"
+            >
               What if your mind was an asset instead of your worst enemy?
             </Typography>
           </Stack>
@@ -73,17 +95,23 @@ function App() {
 
         <Stack minHeight="100vh">
           <Stack
-            direction="row"
+            direction={isMobile ? "column-reverse" : "row"}
             alignItems="center"
             justifyContent="center"
             spacing={4}
           >
-            <Typography variant="h5" textAlign="left">
+            <Typography variant="h5" textAlign={isMobile ? "center" : "left"}>
               Imagine moving through life with the confidence to be yourself,
               not hiding or being concerned about how you are being perceived.
             </Typography>
 
-            <img src={benSilly} style={{ height: 350, borderRadius: "50%" }} />
+            <img
+              src={benSilly}
+              style={{
+                height: 350,
+                borderRadius: "50%",
+              }}
+            />
           </Stack>
 
           <Stack
@@ -91,7 +119,7 @@ function App() {
             alignItems="center"
             justifyContent="center"
             minHeight="50vh"
-            pb={8}
+            mt={isMobile ? 12 : undefined}
           >
             <img src={therapyIcon} style={{ margin: 24 }} />
             <Typography variant="h5">
