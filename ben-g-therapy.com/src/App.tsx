@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 
 import ben from "./assets/ben.jpg";
 import benSilly from "./assets/ben-silly.jpg";
