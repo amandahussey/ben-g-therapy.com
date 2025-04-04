@@ -12,7 +12,7 @@ import { theme } from "./theme";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Stack justifyContent="center" alignItems="center" maxWidth={1200}>
+      <Stack justifyContent="center" alignItems="center" maxWidth={1000}>
         {/* Section 1 */}
         <Stack
           direction="row"
@@ -42,24 +42,21 @@ function App() {
         </Stack>
 
         {/* Section 2 */}
-        <Stack
-          alignItems="center"
-          justifyContent="center"
-          spacing={4}
-          minHeight="100vh"
-          pb={8}
-        >
-          <Stack direction="row" alignItems="center" spacing={6}>
-            <Typography variant="h5" textAlign="left">
+        <Stack justifyContent="center" spacing={16} minHeight="100vh" pb={8}>
+          <Stack alignItems="center" spacing={6}>
+            <img src={mentalHealthIcon} style={{ height: 150 }} />
+            <Typography variant="h4" textAlign="left" fontStyle="italic">
               What if your mind was an asset instead of your worst enemy?
             </Typography>
-            <img src={mentalHealthIcon} />
           </Stack>
 
-          <Stack direction="row" alignItems="center" spacing={4}>
-            <img src={relievedIcon} />
+          <Stack direction="row" spacing={4}>
+            <img
+              src={relievedIcon}
+              style={{ height: 150, position: "relative", top: -12 }}
+            />
 
-            <Stack spacing={5}>
+            <Stack spacing={3}>
               <Typography variant="h5" textAlign="left">
                 You can embody joy, embrace life and face challenges you thought
                 impossible.
@@ -86,7 +83,7 @@ function App() {
               not hiding or being concerned about how you are being perceived.
             </Typography>
 
-            <img src={benSilly} style={{ height: 400, borderRadius: "50%" }} />
+            <img src={benSilly} style={{ height: 350, borderRadius: "50%" }} />
           </Stack>
 
           <Stack
