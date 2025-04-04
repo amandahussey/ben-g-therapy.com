@@ -7,7 +7,8 @@ import "./App.css";
 function App() {
   return (
     <Stack justifyContent="center" alignItems="center">
-      <Stack direction="row" alignItems="center" spacing={4}>
+      {/* Section 1 */}
+      <Stack direction="row" alignItems="center" spacing={4} minHeight="100vh">
         <Typography variant="h4" textAlign="left" maxWidth={600}>
           How would it feel to be heard, understood, and supported through hard
           times in your life?
@@ -18,27 +19,43 @@ function App() {
         </Stack>
       </Stack>
 
+      {/* Section 2 */}
       <Stack
         direction="row"
         alignItems="center"
         justifyContent="center"
         spacing={4}
+        minHeight="100vh"
       >
-        <Typography variant="h5">
+        <img src={benSilly} style={{ height: 300, borderRadius: "50%" }} />
+        <Typography variant="h5" textAlign="left">
           Imagine moving through life with the confidence to be yourself, not
           hiding or being concerned about how you are being perceived. What if
           your mind was an asset instead of your worst enemy!
         </Typography>
-        <img src={benSilly} style={{ height: 200, borderRadius: "50%" }} />
       </Stack>
 
-      <Typography variant="h6">
-        You can embody joy, embrace life and face challenges you thought
-        impossible. Through a multi-diciplinary approach leaning heavily on EMDR
-        and CBT, I am here to support you and provide meaningful methods for
-        change into your life. Don't let another day go by without being seen,
-        heard, and supported!
-      </Typography>
+      {/* Section 3 */}
+      <Stack
+        alignItems="center"
+        justifyContent="center"
+        minHeight="100vh"
+        spacing={4}
+      >
+        <Typography variant="h4">
+          You can embody joy, embrace life and face challenges you thought
+          impossible.
+        </Typography>
+        <Typography variant="h5">
+          Through a multi-diciplinary approach leaning heavily on EMDR and CBT,
+          I am here to support you and provide meaningful methods for change
+          into your life.
+        </Typography>
+
+        <Typography variant="h4">
+          Don't let another day go by without being seen, heard, and supported!
+        </Typography>
+      </Stack>
     </Stack>
   );
 }
