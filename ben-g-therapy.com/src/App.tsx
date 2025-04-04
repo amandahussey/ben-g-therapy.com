@@ -49,21 +49,6 @@ function App() {
           minHeight="100vh"
           pb={8}
         >
-          <Stack
-            direction="row"
-            alignItems="center"
-            justifyContent="center"
-            spacing={4}
-          >
-            <img src={benSilly} style={{ height: 400, borderRadius: "50%" }} />
-            <Stack spacing={3} maxWidth={600}>
-              <Typography variant="h5" textAlign="left">
-                Imagine moving through life with the confidence to be yourself,
-                not hiding or being concerned about how you are being perceived.
-              </Typography>
-            </Stack>
-          </Stack>
-
           <Stack direction="row" alignItems="center" spacing={6}>
             <Typography variant="h5" textAlign="left">
               What if your mind was an asset instead of your worst enemy?
@@ -71,7 +56,7 @@ function App() {
             <img src={mentalHealthIcon} />
           </Stack>
 
-          <Stack direction="row" alignItems="center" spacing={6}>
+          <Stack direction="row" alignItems="center" spacing={4}>
             <img src={relievedIcon} />
 
             <Stack spacing={5}>
@@ -89,24 +74,40 @@ function App() {
           </Stack>
         </Stack>
 
-        <Stack
-          spacing={2}
-          alignItems="center"
-          justifyContent="center"
-          minHeight="50vh"
-          pb={8}
-        >
-          <img src={therapyIcon} />
-          <Typography variant="h4">
-            Don't let another day go by without being seen, heard, and
-            supported.
-          </Typography>
-          <Typography variant="h5">
-            Give me a call to set up your first appointment today!
-          </Typography>
-          <Link variant="h4" href="tel:303-951-6430">
-            (303) 951-6430
-          </Link>
+        <Stack minHeight="100vh">
+          <Stack
+            direction="row"
+            alignItems="center"
+            justifyContent="center"
+            spacing={4}
+          >
+            <Typography variant="h5" textAlign="left">
+              Imagine moving through life with the confidence to be yourself,
+              not hiding or being concerned about how you are being perceived.
+            </Typography>
+
+            <img src={benSilly} style={{ height: 400, borderRadius: "50%" }} />
+          </Stack>
+
+          <Stack
+            spacing={2}
+            alignItems="center"
+            justifyContent="center"
+            minHeight="50vh"
+            pb={8}
+          >
+            <img src={therapyIcon} style={{ margin: 24 }} />
+            <Typography variant="h5">
+              Don't let another day go by without being seen, heard, and
+              supported.
+            </Typography>
+            <Typography variant="h5">
+              Give me a call to set up your first appointment today!
+            </Typography>
+            <Link variant="h4" href="tel:303-951-6430">
+              (303) 951-6430
+            </Link>
+          </Stack>
         </Stack>
       </Stack>
     </ThemeProvider>
