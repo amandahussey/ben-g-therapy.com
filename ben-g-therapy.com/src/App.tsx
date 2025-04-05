@@ -8,9 +8,11 @@ import {
 
 import ben from "./assets/ben.jpg";
 import benSilly from "./assets/ben-silly.jpg";
+
 import mentalHealthIcon from "./assets/mental-health.png";
 import relievedIcon from "./assets/relieved.png";
 import therapyIcon from "./assets/therapy.png";
+import cognitiveHealthIcon from "./assets/cognitive-control.png";
 
 import "./App.css";
 import { theme } from "./theme";
@@ -60,8 +62,13 @@ function App() {
         </Stack>
 
         {/* Section 2 */}
-        <Stack justifyContent="center" spacing={16} minHeight="100vh" pb={8}>
-          <Stack alignItems="center" spacing={6}>
+        <Stack justifyContent="center">
+          <Stack
+            alignItems="center"
+            justifyContent="center"
+            spacing={4}
+            minHeight="100vh"
+          >
             <img src={mentalHealthIcon} style={{ height: 150 }} />
             <Typography
               variant="h4"
@@ -72,10 +79,19 @@ function App() {
             </Typography>
           </Stack>
 
-          <Stack direction="row" spacing={4}>
+          <Stack
+            minHeight="100vh"
+            direction="row"
+            alignItems="center"
+            spacing={isMobile ? 2.5 : 4}
+          >
             <img
               src={relievedIcon}
-              style={{ height: 150, position: "relative", top: -12 }}
+              style={{
+                height: isMobile ? 100 : 150,
+                position: "relative",
+                top: isMobile ? 0 : -12,
+              }}
             />
 
             <Stack spacing={3}>
@@ -84,13 +100,36 @@ function App() {
                 thought possible.
               </Typography>
 
+              {!isMobile && (
+                <Typography variant="h5" textAlign="left">
+                  Through a multi-diciplinary approach leaning on EMDR and CBT,
+                  I am here to provide methods that support meaninful change in
+                  your life.
+                </Typography>
+              )}
+            </Stack>
+          </Stack>
+
+          {isMobile && (
+            <Stack
+              direction="row"
+              justifyContent="center"
+              spacing={4}
+              minHeight="100vh"
+            >
+              <img
+                src={cognitiveHealthIcon}
+                style={{
+                  height: 100,
+                }}
+              />
               <Typography variant="h5" textAlign="left">
                 Through a multi-diciplinary approach leaning on EMDR and CBT, I
                 am here to provide methods that support meaninful change in your
                 life.
               </Typography>
             </Stack>
-          </Stack>
+          )}
         </Stack>
 
         <Stack minHeight="100vh">
