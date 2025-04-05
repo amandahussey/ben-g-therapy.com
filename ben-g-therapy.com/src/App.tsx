@@ -80,8 +80,8 @@ function App() {
 
             <Stack spacing={3}>
               <Typography variant="h5" textAlign="left">
-                You can embody joy, embrace life and face challenges you thought
-                impossible.
+                You can embody joy, embrace life and face challenges you never
+                thought possible.
               </Typography>
 
               <Typography variant="h5" textAlign="left">
