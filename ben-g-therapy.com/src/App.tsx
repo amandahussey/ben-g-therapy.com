@@ -47,9 +47,9 @@ function App() {
                 src={ben}
                 style={{ height: isMobile ? 300 : 400, borderRadius: "50%" }}
               />
-              <Stack width="100%">
+              <Stack width="100%" spacing={1}>
                 <Typography
-                  variant="h6"
+                  variant="h5"
                   textAlign={isMobile ? "center" : "left"}
                 >
                   Ben Green, LPCC
