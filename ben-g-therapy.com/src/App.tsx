@@ -12,7 +12,6 @@ import relievedIcon from "./assets/relieved.png";
 import therapyIcon from "./assets/therapy.png";
 import cognitiveHealthIcon from "./assets/cognitive-control.png";
 import confidenceIcon from "./assets/confidence.png";
-import selfAcceptanceIcon from "./assets/self-acceptance.png";
 import umbrellaIcon from "./assets/umbrella.png";
 
 const green = "#32A77D"; // #198E64
