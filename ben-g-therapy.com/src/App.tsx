@@ -33,7 +33,7 @@ function App() {
           width: "100%",
         }}
       >
-        <Stack padding="2rem" maxWidth={1000}>
+        <Stack padding="2rem" maxWidth={600}>
           {/* Intro */}
           <Stack
             direction={isMobile ? "column-reverse" : "row"}
@@ -71,7 +71,7 @@ function App() {
             spacing={3}
           >
             <img src={umbrellaIcon} style={{ height: isMobile ? 100 : 150 }} />
-            <Typography variant="h5" textAlign={isMobile ? "center" : "left"}>
+            <Typography variant="h5" textAlign="center">
               How would it feel to be heard, understood, and supported through
               hard times in your life?
             </Typography>
@@ -87,7 +87,7 @@ function App() {
               src={mentalHealthIcon}
               style={{ height: isMobile ? 100 : 150 }}
             />
-            <Typography variant="h5" textAlign={isMobile ? "center" : "left"}>
+            <Typography variant="h5" textAlign="center">
               What if your mind is an asset instead of your worst enemy?
             </Typography>
           </Stack>
@@ -114,65 +114,52 @@ function App() {
           </Stack>
 
           {/* Embody joy */}
-          <Stack minHeight="100vh" alignItems="center" justifyContent="center">
-            <Stack direction="row" spacing={isMobile ? 2.5 : 4}>
+          <Stack
+            minHeight="100vh"
+            alignItems="center"
+            justifyContent="center"
+            direction="row"
+            spacing={4}
+          >
+            <img
+              src={relievedIcon}
+              style={{
+                height: isMobile ? 100 : 150,
+              }}
+            />
+
+            <Typography variant="h5" textAlign="left">
+              You can embody joy, embrace life, and face challenges you never
+              thought possible.
+            </Typography>
+          </Stack>
+
+          <Stack minHeight="100vh" justifyContent="center" alignItems="center">
+            <Stack direction="row" spacing={4}>
               <img
-                src={relievedIcon}
+                src={cognitiveHealthIcon}
                 style={{
-                  height: isMobile ? 100 : 150,
-                  position: "relative",
-                  top: isMobile ? 0 : -12,
+                  height: 100,
                 }}
               />
-
-              <Stack spacing={3}>
-                <Typography variant="h5" textAlign="left">
-                  You can embody joy, embrace life, and face challenges you
-                  never thought possible.
-                </Typography>
-
-                {!isMobile && (
-                  <Typography variant="h5" textAlign="left">
-                    Through a multi-diciplinary approach leaning on EMDR and
-                    CBT, I am here to provide methods that support meaninful
-                    change in your life.
-                  </Typography>
-                )}
-              </Stack>
+              <Typography variant="h5" textAlign="left">
+                Through a multi-diciplinary approach leaning on EMDR and CBT, I
+                am here to provide methods that support meaninful change in your
+                life.
+              </Typography>
             </Stack>
           </Stack>
 
-          {isMobile && (
-            <Stack
-              minHeight="100vh"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <Stack direction="row" spacing={4}>
-                <img
-                  src={cognitiveHealthIcon}
-                  style={{
-                    height: 100,
-                  }}
-                />
-                <Typography variant="h5" textAlign="left">
-                  Through a multi-diciplinary approach leaning on EMDR and CBT,
-                  I am here to provide methods that support meaninful change in
-                  your life.
-                </Typography>
-              </Stack>
-            </Stack>
-          )}
           {/* Be seen, heard */}
           <Stack
-            spacing={6}
+            spacing={3}
             alignItems="center"
             justifyContent="center"
             minHeight="40vh"
             pt={4}
           >
             <img src={therapyIcon} style={{ height: isMobile ? 100 : 200 }} />
-            <Typography variant="h5">
+            <Typography variant="h5" textAlign="center">
               Don't let another day go by without being seen, heard, and
               supported.
             </Typography>
@@ -180,7 +167,7 @@ function App() {
 
           {/* Contact Section */}
           <Stack
-            spacing={6}
+            spacing={3}
             alignItems="center"
             justifyContent="center"
             minHeight="40vh"
