@@ -80,12 +80,8 @@ function App() {
             src={mentalHealthIcon}
             style={{ height: isMobile ? 100 : 150 }}
           />
-          <Typography
-            variant="h5"
-            textAlign={isMobile ? "center" : "left"}
-            fontStyle="italic"
-          >
-            What if your mind was an asset instead of your worst enemy?
+          <Typography variant="h5" textAlign={isMobile ? "center" : "left"}>
+            What if your mind is an asset instead of your worst enemy?
           </Typography>
         </Stack>
 
