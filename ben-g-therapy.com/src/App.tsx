@@ -12,6 +12,8 @@ import relievedIcon from "./assets/relieved.png";
 import therapyIcon from "./assets/therapy.png";
 import cognitiveHealthIcon from "./assets/cognitive-control.png";
 import confidenceIcon from "./assets/confidence.png";
+import selfAcceptanceIcon from "./assets/self-acceptance.png";
+import umbrellaIcon from "./assets/umbrella.png";
 
 const green = "#32A77D"; // #198E64
 
@@ -33,20 +35,16 @@ function App() {
           direction={isMobile ? "column-reverse" : "row"}
           alignItems="center"
           justifyContent="center"
-          spacing={4}
+          spacing={8}
           minHeight="100vh"
         >
-          <Typography variant="h5" textAlign={isMobile ? "center" : "left"}>
-            How would it feel to be heard, understood, and supported through
-            hard times in your life?
-          </Typography>
           <Stack alignItems="center" justifyContent="center" spacing={3}>
             <img
               src={ben}
               style={{ height: isMobile ? 300 : 400, borderRadius: "50%" }}
             />
             <Stack width="100%">
-              <Typography variant="h5" textAlign={isMobile ? "center" : "left"}>
+              <Typography variant="h6" textAlign={isMobile ? "center" : "left"}>
                 Ben Green, LPCC
               </Typography>
               <Typography
@@ -59,11 +57,23 @@ function App() {
             </Stack>
           </Stack>
         </Stack>
+        <Stack
+          minHeight="100vh"
+          justifyContent="center"
+          alignItems="center"
+          spacing={3}
+        >
+          <img src={umbrellaIcon} style={{ height: isMobile ? 100 : 150 }} />
+          <Typography variant="h5" textAlign={isMobile ? "center" : "left"}>
+            How would it feel to be heard, understood, and supported through
+            hard times in your life?
+          </Typography>
+        </Stack>
         {/* What if your mind was an asset instead of your worst enemy? */}
         <Stack
           alignItems="center"
           justifyContent="center"
-          spacing={4}
+          spacing={3}
           minHeight="100vh"
         >
           <img
@@ -172,9 +182,12 @@ function App() {
           <Typography variant="h5">
             Give me a call to set up an appointment today!
           </Typography>
-          <Link variant="h4" href="tel:303-951-6430" color={green}>
-            (303) 951-6430
-          </Link>
+          <Typography variant="h5">
+            Ben Green:{" "}
+            <Link variant="h5" href="tel:303-951-6430" color={green}>
+              (303) 951-6430
+            </Link>
+          </Typography>
         </Stack>
       </Stack>
     </ThemeProvider>
