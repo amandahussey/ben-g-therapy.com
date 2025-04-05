@@ -85,9 +85,9 @@ function App() {
               </Typography>
 
               <Typography variant="h5" textAlign="left">
-                Through a multi-diciplinary approach leaning heavily on EMDR and
-                CBT, I am here to support you and provide meaningful methods for
-                change into your life.
+                Through a multi-diciplinary approach leaning on EMDR and CBT, I
+                am here to provide methods that support meaninful change in your
+                life.
               </Typography>
             </Stack>
           </Stack>
