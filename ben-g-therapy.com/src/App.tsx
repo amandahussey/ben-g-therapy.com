@@ -172,7 +172,7 @@ function App() {
             justifyContent="center"
             minHeight="40vh"
           >
-            <Typography variant="h5">
+            <Typography variant="h5" textAlign="center">
               Give me a call to set up an appointment today.
             </Typography>
             <Typography variant="h5">
