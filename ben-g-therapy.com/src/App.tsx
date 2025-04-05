@@ -7,14 +7,13 @@ import {
 } from "@mui/material";
 
 import ben from "./assets/ben.jpg";
-import benSilly from "./assets/ben-silly.jpg";
-
 import mentalHealthIcon from "./assets/mental-health.png";
 import relievedIcon from "./assets/relieved.png";
 import therapyIcon from "./assets/therapy.png";
 import cognitiveHealthIcon from "./assets/cognitive-control.png";
+import confidenceIcon from "./assets/confidence.png";
 
-const green = "#198e64"; // #198E64
+const green = "#32A77D"; // #198E64
 
 import "./App.css";
 import { theme } from "./theme";
@@ -29,7 +28,7 @@ function App() {
         alignItems="center"
         maxWidth={isMobile ? undefined : 1000}
       >
-        {/* Section 1 */}
+        {/* Intro */}
         <Stack
           direction={isMobile ? "column-reverse" : "row"}
           alignItems="center"
@@ -37,7 +36,7 @@ function App() {
           spacing={4}
           minHeight="100vh"
         >
-          <Typography variant="h4" textAlign={isMobile ? "center" : "left"}>
+          <Typography variant="h5" textAlign={isMobile ? "center" : "left"}>
             How would it feel to be heard, understood, and supported through
             hard times in your life?
           </Typography>
@@ -60,31 +59,51 @@ function App() {
             </Stack>
           </Stack>
         </Stack>
-
-        {/* Section 2 */}
-        <Stack justifyContent="center">
-          <Stack
-            alignItems="center"
-            justifyContent="center"
-            spacing={4}
-            minHeight="100vh"
+        {/* What if your mind was an asset instead of your worst enemy? */}
+        <Stack
+          alignItems="center"
+          justifyContent="center"
+          spacing={4}
+          minHeight="100vh"
+        >
+          <img
+            src={mentalHealthIcon}
+            style={{ height: isMobile ? 100 : 150 }}
+          />
+          <Typography
+            variant="h5"
+            textAlign={isMobile ? "center" : "left"}
+            fontStyle="italic"
           >
-            <img src={mentalHealthIcon} style={{ height: 150 }} />
-            <Typography
-              variant="h4"
-              textAlign={isMobile ? "center" : "left"}
-              fontStyle="italic"
-            >
-              What if your mind was an asset instead of your worst enemy?
-            </Typography>
-          </Stack>
+            What if your mind was an asset instead of your worst enemy?
+          </Typography>
+        </Stack>
 
-          <Stack
-            minHeight="100vh"
-            direction="row"
-            alignItems="center"
-            spacing={isMobile ? 2.5 : 4}
-          >
+        {/* Move with confidence */}
+        <Stack
+          direction={isMobile ? "column-reverse" : "row"}
+          alignItems="center"
+          justifyContent="center"
+          spacing={4}
+          minHeight="100vh"
+        >
+          <Typography variant="h5" textAlign={isMobile ? "center" : "left"}>
+            Imagine moving through life with the confidence to be yourself, not
+            hiding or being concerned about how you are being perceived.
+          </Typography>
+
+          <img
+            src={confidenceIcon}
+            style={{
+              height: isMobile ? 100 : 350,
+              borderRadius: "50%",
+            }}
+          />
+        </Stack>
+
+        {/* Embody joy */}
+        <Stack minHeight="100vh" alignItems="center" justifyContent="center">
+          <Stack direction="row" spacing={isMobile ? 2.5 : 4}>
             <img
               src={relievedIcon}
               style={{
@@ -109,14 +128,11 @@ function App() {
               )}
             </Stack>
           </Stack>
+        </Stack>
 
-          {isMobile && (
-            <Stack
-              direction="row"
-              justifyContent="center"
-              spacing={4}
-              minHeight="100vh"
-            >
+        {isMobile && (
+          <Stack minHeight="100vh" justifyContent="center" alignItems="center">
+            <Stack direction="row" spacing={4}>
               <img
                 src={cognitiveHealthIcon}
                 style={{
@@ -129,49 +145,36 @@ function App() {
                 life.
               </Typography>
             </Stack>
-          )}
+          </Stack>
+        )}
+        {/* Be seen, heard */}
+        <Stack
+          spacing={6}
+          alignItems="center"
+          justifyContent="center"
+          minHeight="45vh"
+          pt={4}
+        >
+          <img src={therapyIcon} style={{ height: isMobile ? 100 : 200 }} />
+          <Typography variant="h5">
+            Don't let another day go by without being seen, heard, and
+            supported.
+          </Typography>
         </Stack>
 
-        <Stack minHeight="100vh">
-          <Stack
-            direction={isMobile ? "column-reverse" : "row"}
-            alignItems="center"
-            justifyContent="center"
-            spacing={4}
-          >
-            <Typography variant="h5" textAlign={isMobile ? "center" : "left"}>
-              Imagine moving through life with the confidence to be yourself,
-              not hiding or being concerned about how you are being perceived.
-            </Typography>
-
-            <img
-              src={benSilly}
-              style={{
-                height: 350,
-                borderRadius: "50%",
-              }}
-            />
-          </Stack>
-
-          <Stack
-            spacing={2}
-            alignItems="center"
-            justifyContent="center"
-            minHeight="50vh"
-            mt={isMobile ? 12 : undefined}
-          >
-            <img src={therapyIcon} style={{ margin: 24 }} />
-            <Typography variant="h5">
-              Don't let another day go by without being seen, heard, and
-              supported.
-            </Typography>
-            <Typography variant="h5">
-              Give me a call to set up your first appointment today!
-            </Typography>
-            <Link variant="h4" href="tel:303-951-6430">
-              (303) 951-6430
-            </Link>
-          </Stack>
+        {/* Contact Section */}
+        <Stack
+          spacing={6}
+          alignItems="center"
+          justifyContent="center"
+          minHeight="50vh"
+        >
+          <Typography variant="h5">
+            Give me a call to set up an appointment today!
+          </Typography>
+          <Link variant="h4" href="tel:303-951-6430" color={green}>
+            (303) 951-6430
+          </Link>
         </Stack>
       </Stack>
     </ThemeProvider>
