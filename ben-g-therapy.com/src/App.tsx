@@ -28,6 +28,11 @@ function App() {
         justifyContent="center"
         alignItems="center"
         maxWidth={isMobile ? undefined : 1000}
+        style={{
+          background: theme.palette.background.default,
+          color: theme.palette.text.primary,
+          padding: "2rem",
+        }}
       >
         {/* Intro */}
         <Stack
@@ -175,10 +180,10 @@ function App() {
           minHeight="50vh"
         >
           <Typography variant="h5">
-            Give me a call to set up an appointment today!
+            Give me a call to set up an appointment today.
           </Typography>
           <Typography variant="h5">
-            Ben Green:{" "}
+            Ben G:{" "}
             <Link variant="h5" href="tel:303-951-6430" color={green}>
               (303) 951-6430
             </Link>
