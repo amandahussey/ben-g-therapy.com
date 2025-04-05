@@ -14,13 +14,13 @@ import relievedIcon from "./assets/relieved.png";
 import therapyIcon from "./assets/therapy.png";
 import cognitiveHealthIcon from "./assets/cognitive-control.png";
 
+const green = "#198e64"; // #198E64
+
 import "./App.css";
 import { theme } from "./theme";
 
 function App() {
   const isMobile = useMediaQuery("(max-width:600px)");
-
-  console.log("isMobile", isMobile);
 
   return (
     <ThemeProvider theme={theme}>
@@ -96,7 +96,7 @@ function App() {
 
             <Stack spacing={3}>
               <Typography variant="h5" textAlign="left">
-                You can embody joy, embrace life and face challenges you never
+                You can embody joy, embrace life, and face challenges you never
                 thought possible.
               </Typography>
 
