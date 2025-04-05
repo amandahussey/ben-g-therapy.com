@@ -46,7 +46,7 @@ function App() {
             />
             <Stack width="100%">
               <Typography variant="h5" textAlign={isMobile ? "center" : "left"}>
-                Ben Green, LCPP
+                Ben Green, LPCC
               </Typography>
               <Typography
                 variant="subtitle1"
