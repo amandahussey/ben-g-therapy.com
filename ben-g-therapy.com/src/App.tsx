@@ -80,7 +80,7 @@ function App() {
           <Stack
             alignItems="center"
             justifyContent="center"
-            spacing={3}
+            spacing={2}
             minHeight="100vh"
           >
             <img
@@ -97,7 +97,7 @@ function App() {
             direction={isMobile ? "column" : "row"}
             alignItems="center"
             justifyContent="center"
-            spacing={4}
+            spacing={2}
             minHeight="100vh"
           >
             <img
@@ -119,7 +119,7 @@ function App() {
             alignItems="center"
             justifyContent="center"
             direction="row"
-            spacing={4}
+            spacing={2}
           >
             <img
               src={relievedIcon}
@@ -135,7 +135,7 @@ function App() {
           </Stack>
 
           <Stack minHeight="100vh" justifyContent="center" alignItems="center">
-            <Stack direction="row" spacing={4}>
+            <Stack direction="row" spacing={2}>
               <img
                 src={cognitiveHealthIcon}
                 style={{
