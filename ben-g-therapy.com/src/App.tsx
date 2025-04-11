@@ -69,9 +69,10 @@ function App() {
             justifyContent="center"
             alignItems="center"
             spacing={3}
+            direction="row"
           >
-            <img src={umbrellaIcon} style={{ height: isMobile ? 100 : 150 }} />
-            <Typography variant="h5" textAlign="center">
+            <img src={umbrellaIcon} style={{ height: 100 }} />
+            <Typography variant="h5">
               How would it feel to be heard, understood, and supported through
               hard times in your life?
             </Typography>
