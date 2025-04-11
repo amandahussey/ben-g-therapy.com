@@ -97,7 +97,7 @@ function App() {
             direction={isMobile ? "column" : "row"}
             alignItems="center"
             justifyContent="center"
-            spacing={2}
+            spacing={isMobile ? 2 : 4}
             minHeight="100vh"
           >
             <img
@@ -124,7 +124,7 @@ function App() {
             <img
               src={relievedIcon}
               style={{
-                height: isMobile ? 100 : 150,
+                height: 100,
               }}
             />
 
