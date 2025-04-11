@@ -95,7 +95,6 @@ function App() {
 
           {/* Move with confidence */}
           <Stack
-            direction={isMobile ? "column" : "row"}
             alignItems="center"
             justifyContent="center"
             spacing={isMobile ? 2 : 4}
@@ -108,7 +107,7 @@ function App() {
                 borderRadius: "50%",
               }}
             />
-            <Typography variant="h5" textAlign={isMobile ? "center" : "left"}>
+            <Typography variant="h5" textAlign="center">
               Imagine moving through life with the confidence to be yourself,
               not hiding or being concerned about how you are being perceived.
             </Typography>
@@ -159,7 +158,7 @@ function App() {
             minHeight="40vh"
             pt={4}
           >
-            <img src={therapyIcon} style={{ height: isMobile ? 100 : 200 }} />
+            <img src={therapyIcon} style={{ height: 100 }} />
             <Typography variant="h5" textAlign="center">
               Don't let another day go by without being seen, heard, and
               supported.
