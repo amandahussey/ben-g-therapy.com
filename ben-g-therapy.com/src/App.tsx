@@ -177,8 +177,8 @@ function App() {
             </Typography>
             <Typography variant="h5">
               Ben G:{" "}
-              <Link variant="h5" href="tel:303-951-6430" color={green}>
-                (303) 951-6430
+              <Link variant="h5" href="tel:970-633-2202" color={green}>
+                (970) 633-2202
               </Link>
             </Typography>
           </Stack>
